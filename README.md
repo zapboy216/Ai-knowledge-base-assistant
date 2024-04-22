@@ -1,4 +1,4 @@
-# template-next-supabase
+## Ai knowlegde base 
 
 Starterkit for OpenAI chat client based on your own content. Main ingredients:
 

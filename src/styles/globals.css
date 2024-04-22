@@ -23,3 +23,11 @@
 .scrollbar-vertical::-webkit-scrollbar {
   width: 8px;
 }
+
+.chatbot {
+  
+  resize: both;
+  overflow: auto;
+  min-width: 300px; 
+  min-height: 300px; 
+}

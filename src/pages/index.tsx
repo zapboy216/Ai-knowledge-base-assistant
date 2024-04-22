@@ -54,15 +54,13 @@ export default function Main() {
         <title>{title}</title>
       </Head>
       <div className="h-full relative flex flex-col justify-between">
-        <header className="flex flex-row items-center justify-between py-4">
-          <h1 className="text-3xl">{title}</h1>
-          <a href="https://github.com/7-docs/7-docs" className="text-xs italic hover:underline">
-            Powered by 7-docs
-          </a>
-        </header>
+      <header className="flex flex-row items-center justify-between py-4 bg-gray-100 shadow">
+  <h1 className="text-3xl px-4">ChatBot</h1>
+</header>
 
+       <div>
         <div
-          className={`scrollbar scrollbar-vertical flex-grow overflow-y-auto flex flex-col gap-2 pb-2`}
+          className={`chatbot scrollbar scrollbar-vertical flex-grow overflow-y-auto flex flex-col gap-2 p-4 bg-white rounded-lg shadow-inner`}
           ref={scrollableElement}>
           {conversation?.history.map((interaction, index, conversation) => (
             <>
@@ -76,9 +74,9 @@ export default function Main() {
 
           <Output text={outputStream} />
         </div>
-
+       
         <form
-          className="flex flex-col gap-4 text-xl bg-dark-gray p-4 pt-6 border-gray border-t-1 sm:border sm:border-b-0"
+          className="flex flex-col gap-4 text-xl bg-gray-200 p-4 pt-6 border-t-1 sm:border rounded-b-lg"
           onSubmit={onSubmit}>
           {isSuggestionsVisible ? (
             <ul
@@ -101,22 +99,26 @@ export default function Main() {
             placeholder="Ask me something..."
             value={inputValue}
             onChange={onChange}
-            className="text-darker-gray flex flex-col flex-grow px-2 py-1 border-none"
+            className="text-darker-gray flex-grow px-4 py-3 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
           />
 
           <div className="flex flex-row gap-4 justify-end">
             <button
               type="button"
-              className="bg-transparent appearance-none text-xs italic text-left cursor-pointer p-0 hover:underline flex-grow"
+              className="bg-transparent text-xs italic text-left p-0 hover:underline flex-grow"
               onClick={toggleSuggestions}>
               Need suggestions?
             </button>
 
-            <InputButton type="reset" value="Reset" onClick={() => dispatch({ type: 'reset' })} />
-            <InputButton type="submit" value="Send" />
+            <InputButton className="bg-gray-300 hover:bg-gray-400 text-white py-2 px-4 rounded" type="reset" value="Reset" onClick={() => dispatch({ type: 'reset' })} />
+            <InputButton className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded" type="submit" value="Send" />
           </div>
         </form>
+      </div>
       </div>
     </main>
   );
 }
+
+
+
