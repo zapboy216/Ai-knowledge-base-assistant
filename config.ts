@@ -3,7 +3,7 @@ export const completionModels = ['gpt-3.5-turbo'];
 
 export const namespace = 'my-namespace';
 
-export const title = 'Knowledge Base';
+export const title = 'Knowledge Bot';
 
 export const suggestions = ['How do I install it?', 'How can I use it?', 'Do you have any examples?'];
 
