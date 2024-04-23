@@ -55,7 +55,7 @@ export default function Main() {
       </Head>
       <div className="h-full relative flex flex-col justify-between">
       <header className="flex flex-row items-center justify-between py-4 bg-gray-100 shadow">
-  <h1 className="text-3xl px-4">ChatBot</h1>
+  <h1 className="text-3xl px-4">The Bot</h1>
 </header>
 
        <div>
